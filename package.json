@@ -1,0 +1,12 @@
+{
+  "name": "bootstrap3-stylus",
+  "description": "Twitter Bootstrap 3 CSS framework ported to stylus",
+  "keywords": ["stylus", "bootstrap 3", "bootstrap3.1.1", "css"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coursera/bootstrap3-stylus.git"
+  },
+  "author": "@priyagupta",
+  "main" : "./stylus",
+  "version": "3.1.1"
+}

@@ -1,0 +1,88 @@
+lesscss-percentage(n)
+  (n * 100)%
+//
+// Responsive: Utility classes
+// --------------------------------------------------
+// IE10 in Windows (Phone) 8
+//
+// Support for responsive views via media queries is kind of borked in IE10, for
+// Surface/desktop in split view and for Windows Phone 8. This particular fix
+// must be accompanied by a snippet of JavaScript to sniff the user agent and
+// apply some conditional CSS to *only* the Surface/desktop Windows 8. Look at
+// our Getting Started page for more information on this bug.
+//
+// For more information, see the following:
+//
+// Issue: https://github.com/twbs/bootstrap/issues/10497
+// Docs: http://getbootstrap.com/getting-started/#browsers
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport
+  width device-width
+// Visibility utilities
+.visible-xs, .visible-sm, .visible-md, .visible-lg
+  responsive-invisibility()
+  
+
+.visible-xs
+  varc8382ec85db0cac3ddd813d5 = "(max-width: " + screen-xs-max + ")"
+  @media varc8382ec85db0cac3ddd813d5
+    responsive-visibility()
+    
+
+.visible-sm
+  var3175ecf6cba08e12d7273090 = "(min-width: " + screen-sm-min + ") and (max-width: " + screen-sm-max + ")"
+  @media var3175ecf6cba08e12d7273090
+    responsive-visibility()
+    
+
+.visible-md
+  var5053c7ef55d13569a96ea33e = "(min-width: " + screen-md-min + ") and (max-width: " + screen-md-max + ")"
+  @media var5053c7ef55d13569a96ea33e
+    responsive-visibility()
+    
+
+.visible-lg
+  var6afe6e785a4bb5aa7ea3557c = "(min-width: " + screen-lg-min + ")"
+  @media var6afe6e785a4bb5aa7ea3557c
+    responsive-visibility()
+    
+
+.hidden-xs
+  varf3f0d6993050e5dec7b69175 = "(max-width: " + screen-xs-max + ")"
+  @media varf3f0d6993050e5dec7b69175
+    responsive-invisibility()
+    
+
+.hidden-sm
+  var7e14ac48514025adc04095b4 = "(min-width: " + screen-sm-min + ") and (max-width: " + screen-sm-max + ")"
+  @media var7e14ac48514025adc04095b4
+    responsive-invisibility()
+    
+
+.hidden-md
+  vare7c36940a1acfbf89f93a1c2 = "(min-width: " + screen-md-min + ") and (max-width: " + screen-md-max + ")"
+  @media vare7c36940a1acfbf89f93a1c2
+    responsive-invisibility()
+    
+
+.hidden-lg
+  vara5f2872c31333e9145229736 = "(min-width: " + screen-lg-min + ")"
+  @media vara5f2872c31333e9145229736
+    responsive-invisibility()
+    
+
+// Print utilities
+//
+// Media queries are placed on the inside to be mixin-friendly.
+.visible-print
+  responsive-invisibility()
+  
+  @media print
+    responsive-visibility()
+    
+
+.hidden-print
+  @media print
+    responsive-invisibility()
+    
+

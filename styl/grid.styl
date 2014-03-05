@@ -1,0 +1,69 @@
+lesscss-percentage(n)
+  (n * 100)%
+//
+// Grid system
+// --------------------------------------------------
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+.container
+  container-fixed()
+  
+  var5794a942cb5a8c1797db3bef = "(min-width: " + screen-sm-min + ")"
+  @media var5794a942cb5a8c1797db3bef
+    width container-sm
+  varfddacf5fe8abe274c484e8a2 = "(min-width: " + screen-md-min + ")"
+  @media varfddacf5fe8abe274c484e8a2
+    width container-md
+  var45dd5962306beddb9b430b6b = "(min-width: " + screen-lg-min + ")"
+  @media var45dd5962306beddb9b430b6b
+    width container-lg
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+.container-fluid
+  container-fixed()
+  
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+.row
+  make-row()
+  
+
+// Columns
+//
+// Common styles for small and large grid columns
+make-grid-columns()
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+make-grid(xs)
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+var9de5dec0435a0f17a0045a2e = "(min-width: " + screen-sm-min + ")"
+@media var9de5dec0435a0f17a0045a2e
+  make-grid(sm)
+  
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+var123a387fcf1b8c36bc03770f = "(min-width: " + screen-md-min + ")"
+@media var123a387fcf1b8c36bc03770f
+  make-grid(md)
+  
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+vardf3f661bc6a056479972b329 = "(min-width: " + screen-lg-min + ")"
+@media vardf3f661bc6a056479972b329
+  make-grid(lg)
+  
